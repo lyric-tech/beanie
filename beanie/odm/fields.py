@@ -331,8 +331,9 @@ class Link(Generic[T]):
                 fetch_links=fetch_links,
             ).to_list()
 
-            for model in fetched_models:
-                data[model.id] = model
+            return fetched_models
+            # for model in fetched_models:
+            #     data[model.id] = model
 
         return list(data.values())
 
